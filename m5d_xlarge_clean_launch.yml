@@ -1,0 +1,18 @@
+spot_price : '1.0'
+ami: 'ami-06c929931b0928763'
+key_name: 'crispy2'
+security_group_id : 'sg-0123fe0138e057052'
+instance_type: 'm5d.xlarge'
+availability_zone: 'eu-west-1b'
+iam_role: 'arn:aws:iam::272317939526:instance-profile/AWS_SSM'
+volumes:
+ - work:
+    id: 'vol-0cf697d8b22f79923'
+    aws_device_name: '/dev/xvdh'
+    device: '/dev/nvme2n1'
+    mount_point: '/home/ubuntu/work'
+ - data:
+    id: 'vol-01add0ee419abc858'
+    aws_device_name: '/dev/xvdf'
+    device: '/dev/nvme1n1'
+    mount_point: '/home/ubuntu/data'
